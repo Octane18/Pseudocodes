@@ -1,0 +1,11 @@
+DECLARE DonutCount : INTEGER
+
+DonutCount <-- 0
+
+INPUT("Enter count for donuts: ", DonutCount)
+
+If DonutCount < 10 Then
+   OUTPUT("Number of donuts: ", DonutCount)
+ElseIf DonutCount >= 10 Then
+       OUTPUT("Number of donuts: many")
+EndIf
