@@ -1,0 +1,14 @@
+DECLARE Str1, Str3 : STRING
+
+Str1 <-- ""
+Str3 <-- ""
+
+INPUT("Enter Str1: ", Str1)
+Str3 <-- "ing"
+
+If LENGTH(Str1) < 3 Then
+   OUTPUT(Str1)
+ElseIf LOCATE(Str1, Str3) = 0 Then
+       OUTPUT(Str1, "ing")
+Else OUTPUT(Str1, "ly")
+EndIf
