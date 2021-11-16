@@ -1,0 +1,29 @@
+DECLARE Str1, Str2, cstf1, cstf2 : STRING
+DECLARE thisChar : CHARACTER
+DECLARE Count, pos1, pos2 : INTEGER
+
+Str1 <-- ""
+Str2 <-- ""
+thisChar <-- ''
+Count <-- 0
+pos1 <-- 0
+pos2 <-- 0
+cstf1 <-- ""
+cstf2 <-- ""
+
+
+INPUT("Enter Str1: ", Str1)
+
+cstf1 <-- "not"
+cstf2 <-- "bad"
+pos1 <-- LOCATE(Str1, cstf1)
+pos2 <-- LOCATE(Str1, cstf2)
+
+If pos1 <> 0 AND pos2 <> 0 Then
+   For Count <-- 1 To pos1 -2 
+       thisChar <-- Mid(Str1, Count, 1)
+       Str2 <-- Str2 + thisChar
+   Next
+   OUTPUT(Str2, ' ', "good")
+Else OUTPUT(Str1)
+EndIf
