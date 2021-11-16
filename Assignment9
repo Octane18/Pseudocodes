@@ -1,0 +1,29 @@
+DECLARE Str1, Str2, Str3, Str4, ft1, ft2 : STRING 
+DECLARE thisChar : CHARACTER
+DECLARE Count : INTEGER
+
+Str1 <-- ""
+Str2 <-- ""
+Str3 <-- ""
+ft1 <-- ""
+ft2 <-- ""
+thisChar <-- ''
+Count <-- 0
+
+INPUT("Enter Str1 : ", Str1)
+INPUT("Enter Str2: ", Str2)
+
+ft1 <-- LEFT(Str1, 2)
+Str4 <-- Str4 + ft1
+ft2 <-- LEFT(Str2, 2)
+Str3 <-- Str3 + ft2
+
+FOR Count <-- 3 to LENGTH(Str1)
+    thisChar <-- MID(Str1, Count, 1)
+    Str3 <-- Str3 + thisChar
+NEXT
+FOR Count <-- 3 To LENGTH(Str2)
+    thisChar <-- MID(Str2, Count, 1)
+    Str4 <-- Str4 + thisChar
+NEXT
+OUTPUT("Extracted String: ", Str3, ' ', Str4)
